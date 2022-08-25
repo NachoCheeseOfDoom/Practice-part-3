@@ -112,15 +112,132 @@ button {
 
 // Use both a for loop and a template string to solve the challenge
 
-const largestCountires = "The 3 largest countries are";
-const countries = [["China", " India", " USA"]];
-const bestFruits = "The 2 best fruits are";
-const fruits = [["Apples", " Bananas"]];
-function generateSentence(desc, arr) {
-  for (let i = 0; i < arr.length; i++) {
-    console.log(`${desc} ${arr[i]}`)
-  }
+//----------------------------------------------------------
+// const largestCountires = "The 3 largest countries are";
+// const countries = [["China", " India", " USA"]];
+// const bestFruits = "The 2 best fruits are";
+// const fruits = [["Apples", " Bananas"]];
+// function generateSentence(desc, arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     console.log(`${desc} ${arr[i]}`)
+//   }
+// }
+// generateSentence(bestFruits, fruits)
+//My solution *Wrong*
+//----------------------------------------------------------
+// function generateSentence(desc, arr) {
+//   let baseString = `The ${arr.length} ${desc} are `
+//   const lastIndex = arr.length - 1
+//   for (let i = 0; i < arr.length; i++) {
+//     if (i === lastIndex) {
+//       baseString += arr[i] + "."
+//     } else {
+//       baseString += arr[i] + ", "
+//     }
+//   }
+//   return baseString
+// }
+
+// const sentence = generateSentence("highest mountains", ["Mount Everest", "K2"])
+// console.log(sentence)
+
+//-----------------------------------------------------------------------------------------
+
+// 6.Render images
+// Create a function that renders the three team images
+// Use a for loop, template strings (``), plus equals (+=)
+// .innerHTML to solve the challenge.
+
+// /* HTML CODE:
+// <h1>The Brooklyn Agency</h1>
+//     <div id="container">
+//       <!-- <img class="team-img" src="images/hip1.jpg" />
+//       <img class="team-img" src="images/hip2.jpg" />
+//       <img class="team-img" src="images/hip3.jpg" /> -->
+//     </div>*/
+
+// /* CSS CODE: body {
+//   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+//   background: whitesmoke;
+//   text-align: center;
+//   color: #130e0f;
+// }
+
+// h1 {
+//   font-weight: 200;
+//   letter-spacing: 2px;
+// }
+
+// #container {
+//   width: 100%;
+// }
+
+// .team-img {
+//   width: 100px;
+//   border-radius: 100%;
+//   margin: 10px;
+// }*/
+// const imgs = [
+//   "images/hip1.jpg",
+//   "images/hip2.jpg",
+//   "images/hip3.jpg",
+//   "images/banner3.png"
+// ]
+// const containerEl = document.getElementById("container");
+
+// function renderImg() {
+//   let imgsDom = "";
+//   for (let i = 0; i < imgs.length; i++) {
+//     imgsDom += `<img alt='Wallpaper' class='team-img' src='${imgs[i]}' > `
+//   }
+//   containerEl.innerHTML = imgsDom;
+// }
+
+// renderImg();
+//-----------------------------------------------------------------------------------------
+
+// 7. Rounding numbers
+
+/*HTML CODE:
+    <button id="purchase-btn"></button>
+*/
+
+/*CSS CODE:
+html, body {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-generateSentence(bestFruits, fruits)
+button {
+  border: none;
+  border-radius: 200px;
+  padding: 15px 30px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #fc807f;
+  color: white;
+}*/
+
+// Challenge:
+// Round the price in the button down to two decimal places.
+// Don't know which method to use? Google it!
+
+// const totalPrice = 420.69235632455
+// const btn = document.getElementById("purchase-btn")
+// btn.textContent = `Buy €${totalPrice.toFixed(2)}`
+//-----------------------------------------------------------------------------------------
+
+// 8. Convert string to number challenge
+
+// Challenge:
+// The toFixed() method doesn't work anymore. Can you make it work?
+// Google the error message if you're unsure about how to do it
+
+const totalPrice = "420.69235632455"
+const btn = document.getElementById("purchase-btn")
+btn.textContent = `Buy €${Number(totalPrice).toFixed(2)}`
+
+
 //-----------------------------------------------------------------------------------------
